@@ -18,6 +18,7 @@ jobs:
         id: create-release-draft
         uses: ./
         with:
+          milliseconds: 10000
           repo-token: ${{ secrets.GITHUB_TOKEN  }}
       - name: Print the URL of the release draft
         if: steps.create-release-draft.outputs.release-url != ''
