@@ -13,7 +13,7 @@ export async function getPreviousVersionTag(tag: string): Promise<string | null>
 
     const options: ExecOptions = {
         listeners: {
-            stderr: (data: Buffer) => {
+            stdout: (data: Buffer) => {
                 previousTag += data.toString()
             }
         },
