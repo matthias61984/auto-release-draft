@@ -15,7 +15,7 @@ jobs:
       - name: Get the Sources
         uses: actions/checkout@v1
       - name: Create a release draft for a version tag
-        is: create-release-draft
+        id: create-release-draft
         uses: ./
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
