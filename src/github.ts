@@ -16,7 +16,7 @@ export async function createReleaseDraft(versionTag: string, repoToken: string, 
         draft: true
     })
 
-    if (response.status != 201) {
+    if (response.status !== 201) {
         throw new Error(`Failed to create the release: ${response.status}`)
     }
 
